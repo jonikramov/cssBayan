@@ -38,6 +38,7 @@ body {
     border-top: thin solid lightgray;
     padding-top: 1.75rem;
     padding-bottom: 1.25rem;
+    user-select: none;
 }
 
 .item-end {
@@ -125,19 +126,26 @@ label:hover .content  {
 
 
 
-label:hover .title picture {
-    transform: rotate(315deg);
-    transform-origin: center;   
-
+@media (hover: hover){
+    
+    label:hover .title picture {
+        transform: rotate(315deg);
+        transform-origin: center;   
+    
+    }
+    
+    .accordion:hover .title picture {
+        display: block;
+    }
+    
+    .accordion:hover input + label p {
+        color: black;
+    }    
 }
 
-.accordion:hover .title picture {
-    display: block;
-}
 
-.accordion:hover input + label p {
-    color: black;
-}
+
+
 
 label:active  {
     transition: none;
