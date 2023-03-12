@@ -11,6 +11,7 @@ html {
 }
 
 h1 {
+
     font-size: 1.5rem;
 }
 
@@ -22,6 +23,7 @@ body {
 .wrapper {
     max-width: 60%;
     margin: 0 auto;
+    margin-top: 50px;
 }
 
 .accordion {
@@ -156,6 +158,11 @@ label:active  {
         max-width: 55%;
 
     }
+
+    .title picture {
+        display: block;
+
+    }
     
 }
 
@@ -171,6 +178,9 @@ label:active  {
         max-width: 60%;
 
     }
+
+
+    
     
 }
 
