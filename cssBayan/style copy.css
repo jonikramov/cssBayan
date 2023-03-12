@@ -10,32 +10,26 @@ html {
     font-size: 1.5rem;
 }
 
-h1 {
-    font-size: 1.5rem;
-}
-
 
 body {
     background: #F5F5EB;
 }
 
 .wrapper {
-    max-width: 60%;
+    width: 1140px;
     margin: 0 auto;
 }
 
 .accordion {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
     cursor: pointer;
 }
 
 .item {
     border-top: thin solid lightgray;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
 
 }
@@ -51,14 +45,14 @@ input {
 .content {    
     display: none;
     justify-content: center;
-    margin-top: 0.625rem; 
-    transition: 0.1s; 
+    margin-top: 10px; 
+    transition: 0.1s ; 
     transform: scale(0);
 
 
 }
 
-.content > picture {
+.content > img {
     display: block;
     margin: 0 auto;     
 }
@@ -66,7 +60,7 @@ input {
 
 .item label {
     cursor: pointer;
-    /* display: block; */
+    display: block;
    
 }
 
@@ -77,7 +71,7 @@ input {
     
 }
 
-.title picture {
+.title img {
     display: block;
     display: none;
     transition: 0.5s ease;  
@@ -87,7 +81,7 @@ label {
     transform: 1s ease;
 }
 
-label .title picture {
+label .title img {
     transform: rotate(0deg);
 }
 
@@ -98,12 +92,13 @@ label p {
 
 
 input:checked + label .content {
-    display: flex;  
+    display: block;
     transform: scale(1);
 }
 
 
-input:checked + label .title picture {
+
+input:checked + label .title img {
     transform: rotate(225deg);
 }
 
@@ -116,7 +111,7 @@ input:checked +  label p {
 
 /* HOVER EFFECT */
 label:hover .content  {
-    display: flex;   
+    display: block;   
     transition: 1s ease-out;
     transform: scale(1); 
 
@@ -124,11 +119,11 @@ label:hover .content  {
 
 
 
-label:hover .title picture {
+label:hover .title img {
     transform: rotate(135deg);
 }
 
-.accordion:hover .title picture {
+.accordion:hover .title img {
     display: block;
 }
 
@@ -138,60 +133,6 @@ label:hover .title picture {
 
 
 
-
-@media screen and (max-width: 1060px) {
-
-    html {
-        font-size: 1.25rem;
-    }
-
-    .wrapper {
-        max-width: 55%;
-
-    }
-    
-}
-
-
-@media screen and (max-width: 820px) {
-
-    html {
-        font-size: 1.0rem;
-    }
-
-    .wrapper {
-        max-width: 60%;
-
-    }
-    
-}
-
-@media screen and (max-width: 600px) {
-
-    html {
-        font-size: 0.75rem;
-    }
-
-    .wrapper {
-        max-width: 65%;
-
-    }
-    
-}
-
-
-@media screen and (max-width: 320px) {
-
-    html {
-        font-size: 0.5rem;
-    }
-
-    .wrapper {
-        max-width: 70%;
-
-    }
-    
-}
 
 
 
