@@ -41,15 +41,18 @@ input {
     display: none;
 }
 
-.content {
+.content {    
     display: none;
     justify-content: center;
- 
+    margin-top: 10px; 
+    transition: 0.5s ease; 
+
+
 }
 
 .content > img {
     display: block;
-    margin: 0 auto; 
+    margin: 0 auto;     
 }
 
 
@@ -62,13 +65,14 @@ input {
 .title {
     display: flex;
     justify-content: space-between;
+
     
 }
 
 .title img {
+    display: block;
     display: none;
-    transition: 0.5s ease;
-    transform: scale(0);
+    transition: 0.5s ease;  
 }
 
 label {
@@ -81,13 +85,16 @@ label .title img {
 
 label p {
     color: blue;
-    padding-bottom: 0px;
+    /* margin-bottom: 10px; */
 }
 
 
 input:checked + label .content {
     display: block;
+}
 
+input:checked + label .content img {
+    transform: scale(1);
 }
 
 input:checked + label .title img {
@@ -103,14 +110,14 @@ input:checked +  label p {
 
 /* HOVER EFFECT */
 label:hover .content  {
-    display: block;
-    
+    display: block;   
+    transform: scale(1); 
 }
 
+
+
 label:hover .title img {
-    /* display: block; */
     transform: rotate(135deg);
-    /* transition: 0.5s ease; */
 }
 
 .accordion:hover .title img {
