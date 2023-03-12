@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+
+body {
+    background: #F5F5EB;
+}
+
+.wrapper {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.item {
+    border-top: thin solid lightgray;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+
+}
+
+.item-end {
+    border-bottom: thin solid lightgray;
+}
+
+input {
+    display: none;
+}
+
+.content {
+    display: none;
+    justify-content: center;
+ 
+}
+
+.content > img {
+    display: block;
+    margin: 0 auto; 
+}
+
+
+.item label {
+    cursor: pointer;
+    display: block;
+   
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.title img {
+    display: none;
+    transition: 0.5s ease;
+    transform: scale(0);
+}
+
+label {
+    transform: 1s ease;
+}
+
+label .title img {
+    transform: rotate(0deg);
+}
+
+label p {
+    color: blue;
+    padding-bottom: 0px;
+}
+
+
+input:checked + label .content {
+    display: block;
+
+}
+
+input:checked + label .title img {
+    transform: rotate(225deg);
+}
+
+input:checked +  label p {
+    color: black;
+}
+
+
+
+
+/* HOVER EFFECT */
+label:hover .content  {
+    display: block;
+    
+}
+
+label:hover .title img {
+    /* display: block; */
+    transform: rotate(135deg);
+    /* transition: 0.5s ease; */
+}
+
+.accordion:hover .title img {
+    display: block;
+}
+
+.accordion:hover input + label p {
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
