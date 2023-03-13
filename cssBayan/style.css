@@ -8,6 +8,7 @@ html {
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
     font-size: 1.5rem;
+    -webkit-tap-highlight-color: transparent;
 }
 
 h1 {
@@ -49,11 +50,11 @@ input {
     display: none;
 }
 
-.content {    
+.content {
     max-height: 0;
     display: flex;
     justify-content: center;
-    margin-top: 0.625rem; 
+    margin-top: 0.625rem;
     overflow: hidden;
     transform: scale(0);
 
@@ -61,26 +62,26 @@ input {
 
 .content > picture {
     display: block;
-    margin: 0 auto;     
+    margin: 0 auto;
 }
 
 
 .item label {
     cursor: pointer;
     /* display: block; */
-   
+
 }
 
 .title {
     display: flex;
     justify-content: space-between;
 
-    
+
 }
 
 .title picture {
     display: none;
-    transition: 0.5s ease;  
+    transition: 0.5s ease;
 }
 
 label {
@@ -98,7 +99,7 @@ label p {
 
 
 input:checked + label .content {
-    max-height: max-content; 
+    max-height: max-content;
     transition: 0.3s ease-out;
     transform: scale(1);
 }
@@ -107,7 +108,7 @@ input:checked + label .content {
 input:checked + label .title picture {
     transform: rotate(315deg);
     transform-origin: center;
-    
+
 }
 
 input:checked +  label p {
@@ -117,33 +118,55 @@ input:checked +  label p {
 
 
 /* HOVER EFFECT */
-label:hover .content  {
-    transition: 1.0s all;
-    max-height: max-content;  
-    transform: scale(1);
-    
+
+
+
+
+@media (hover: none) and (pointer: coarse) {
+
+    input:checked + label .content {
+        max-height: max-content;
+        transition: 0.3s ease-out;
+        transform: scale(1);
+    }
+
+
+    input:checked + label .title picture {
+        transform: rotate(315deg);
+        transform-origin: center;
+
+    }
+
+    input:checked +  label p {
+        color: black;
+    }
+
 }
 
 
+@media (hover: hover) and (pointer: fine) {
 
-@media (hover: hover){
-    
+    label:hover .content  {
+        transition: 1.0s all;
+        max-height: max-content;
+        transform: scale(1);
+
+    }
+
     label:hover .title picture {
         transform: rotate(315deg);
-        transform-origin: center;   
-    
+        transform-origin: center;
+
     }
-    
+
     .accordion:hover .title picture {
         display: block;
     }
-    
+
     .accordion:hover input + label p {
         color: black;
-    }    
+    }
 }
-
-
 
 
 
@@ -171,7 +194,7 @@ label:active  {
         display: block;
 
     }
-    
+
 }
 
 
@@ -188,8 +211,8 @@ label:active  {
     }
 
 
-    
-    
+
+
 }
 
 @media screen and (max-width: 600px) {
@@ -202,7 +225,7 @@ label:active  {
         max-width: 65%;
 
     }
-    
+
 }
 
 
@@ -216,7 +239,7 @@ label:active  {
         max-width: 70%;
 
     }
-    
+
 }
 
 
