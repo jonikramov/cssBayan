@@ -251,7 +251,11 @@ label:active  {
 
 
 
-
+/* .content picture {
+    max-height: inherit;
+    max-width: 100%;
+    box-shadow: inset;
+  } */
 
 
 
